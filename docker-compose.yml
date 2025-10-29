@@ -1,19 +1,13 @@
-name: app
+name: simple
 
 services:
-  web1:
-    image: nginx:latest
+  app:
+    image: mubinibum/simple-apps:1.0
+    build: ./app
     ports:
-      - "8081:80"
+      - "5000:3000"
+    volumes:
+      - vol-simple:/app/public/images/
 
-  web2:
-    image: httpd
-    ports:
-      - "8082:80"
-
-  db:
-    image: postgres:17
-    environment:
-      POSTGRES_PASSWORD: admin123
-    ports:
-      - "5432:5432"
+volumes:
+  vol-simple:
