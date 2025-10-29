@@ -12,6 +12,6 @@ services:
       - "8082:80"
 
   db:
-    image: postgresql:17
+    image: postgres:17
     environment:
       POSTGRES_PASSWORD: admin123
