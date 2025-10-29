@@ -1,0 +1,17 @@
+name: app
+
+services:
+  web1:
+    image: nginx:latest
+    ports:
+      - "8081:80"
+
+  web2:
+    image: httpd
+    ports:
+      - "8082:80"
+
+  db:
+    image: postgresql:17
+    environment:
+      POSTGRES_PASSWORD: admin123
