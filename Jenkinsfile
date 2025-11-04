@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull SCM') {
             steps {
-                    echo 'Repository sudah dicheckout otomatis oleh Jenkins.'
+                git branch: 'main', url: 'https://github.com/mubinibum/simple-apps.git'
             }
         }
         
